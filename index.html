@@ -287,6 +287,34 @@
     <button type="submit">Enviar</button>
   </form>
 
+<script>
+    const form = document.getElementById('quizForm');
+    const respostasSelecionadas = {};
+
+    form.addEventListener('change', (event) => {
+      const pergunta = event.target.name;
+      const resposta = event.target.value;
+      respostasSelecionadas[pergunta] = resposta;
+    });
+
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      exibirRespostasSelecionadas();
+    });
+
+    function exibirRespostasSelecionadas() {
+      const respostasDiv = document.getElementById('respostasSelecionadas');
+      respostasDiv.innerHTML = '<h2>Respostas Selecionadas:</h2>';
+
+      for (const pergunta in respostasSelecionadas) {
+        const resposta = respostasSelecionadas[pergunta];
+        const perguntaElement = document.createElement('p');
+        perguntaElement.textContent = `${pergunta}: ${resposta}`;
+        respostasDiv.appendChild(perguntaElement);
+      }
+    }
+  </script>
+
   <script>
     // JavaScript para processar o formulário
     document.getElementById("quizForm").addEventListener("submit", function(event) {
