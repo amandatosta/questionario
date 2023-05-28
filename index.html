@@ -316,49 +316,12 @@
       }
     }
   </script>
-
-    <button type="submit">Enviar</button>
     
     <input type="submit" value="Enviar">
     
   </form>
   
 <div id="resultado"></div>
-  
-  <script>
-  document.getElementById('quizForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evita o comportamento padrão do envio do formulário
-
-    // Obtém as respostas selecionadas pelo usuário
-    var answers = {};
-    var inputs = document.querySelectorAll('input[type="radio"]:checked');
-    for (var i = 0; i < inputs.length; i++) {
-      var input = inputs[i];
-      answers[input.name] = parseInt(input.value);
-    }
-
-    // Calcula o resultado
-    var result = calculateResult(answers);
-
-    // Exibe o resultado ao usuário
-    var resultadoElement = document.getElementById('resultado');
-    resultadoElement.textContent = 'Resultado: ' + result;
-
-    // Você pode adicionar mais lógica aqui, como enviar os dados para um servidor
-  });
-
-  // Função para calcular o resultado
-  function calculateResult(answers) {
-    // Implemente a lógica de cálculo do resultado aqui, com base nas respostas fornecidas
-    // Retorna o resultado calculado
-    var total = 0;
-    for (var question in answers) {
-      total += answers[question];
-    }
-    return total;
-  }
-</script>
-
   
   <script>
     // JavaScript para processar o formulário
@@ -368,34 +331,34 @@
       // Obter as respostas do usuário
       var respostaPergunta1 = parseInt(document.querySelector('input[name="pergunta1"]:checked').value);
       var respostaPergunta2 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta3 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta4 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta5 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta6 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta7 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta8 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta9 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta10 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta11 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta12 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta13 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta14 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta15 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta16 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta17 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta18 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta19 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta20 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta21 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta22 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta23 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta24 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta25 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta26 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta27 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta28 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta29 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
-      var respostaPergunta30 = parseInt(document.querySelector('input[name="pergunta2"]:checked').value);
+      var respostaPergunta3 = parseInt(document.querySelector('input[name="pergunta3"]:checked').value);
+      var respostaPergunta4 = parseInt(document.querySelector('input[name="pergunta4"]:checked').value);
+      var respostaPergunta5 = parseInt(document.querySelector('input[name="pergunta5"]:checked').value);
+      var respostaPergunta6 = parseInt(document.querySelector('input[name="pergunta6"]:checked').value);
+      var respostaPergunta7 = parseInt(document.querySelector('input[name="pergunta7"]:checked').value);
+      var respostaPergunta8 = parseInt(document.querySelector('input[name="pergunta8"]:checked').value);
+      var respostaPergunta9 = parseInt(document.querySelector('input[name="pergunta9"]:checked').value);
+      var respostaPergunta10 = parseInt(document.querySelector('input[name="pergunta10"]:checked').value);
+      var respostaPergunta11 = parseInt(document.querySelector('input[name="pergunta11"]:checked').value);
+      var respostaPergunta12 = parseInt(document.querySelector('input[name="pergunta12"]:checked').value);
+      var respostaPergunta13 = parseInt(document.querySelector('input[name="pergunta13"]:checked').value);
+      var respostaPergunta14 = parseInt(document.querySelector('input[name="pergunta14"]:checked').value);
+      var respostaPergunta15 = parseInt(document.querySelector('input[name="pergunta15"]:checked').value);
+      var respostaPergunta16 = parseInt(document.querySelector('input[name="pergunta16"]:checked').value);
+      var respostaPergunta17 = parseInt(document.querySelector('input[name="pergunta17"]:checked').value);
+      var respostaPergunta18 = parseInt(document.querySelector('input[name="pergunta18"]:checked').value);
+      var respostaPergunta19 = parseInt(document.querySelector('input[name="pergunta19"]:checked').value);
+      var respostaPergunta20 = parseInt(document.querySelector('input[name="pergunta20"]:checked').value);
+      var respostaPergunta21 = parseInt(document.querySelector('input[name="pergunta21"]:checked').value);
+      var respostaPergunta22 = parseInt(document.querySelector('input[name="pergunta22"]:checked').value);
+      var respostaPergunta23 = parseInt(document.querySelector('input[name="pergunta23"]:checked').value);
+      var respostaPergunta24 = parseInt(document.querySelector('input[name="pergunta24"]:checked').value);
+      var respostaPergunta25 = parseInt(document.querySelector('input[name="pergunta25"]:checked').value);
+      var respostaPergunta26 = parseInt(document.querySelector('input[name="pergunta26"]:checked').value);
+      var respostaPergunta27 = parseInt(document.querySelector('input[name="pergunta27"]:checked').value);
+      var respostaPergunta28 = parseInt(document.querySelector('input[name="pergunta28"]:checked').value);
+      var respostaPergunta29 = parseInt(document.querySelector('input[name="pergunta29"]:checked').value);
+      var respostaPergunta30 = parseInt(document.querySelector('input[name="pergunta30"]:checked').value);
 
 
       // Calcular a pontuação total para cada estilo
@@ -406,8 +369,8 @@
       var resolucao = respostaPergunta5 + respostaPergunta12 + respostaPergunta22 + respostaPergunta24 + respostaPergunta27 + respostaPergunta28;
 
       // Exibir os resultados
-      alert("Estilo de confrontação: " + confrontacao + "\nEstilo de evitação: " + evitacao + "\nEstilo de compromisso: " + compromisso + "\nEstilo de cedência: " + cedencia + "\nEstilo de resolução de problemas/colaboração: " + resolucao);
-
+      alert("Estilo de confrontação: " + confrontacao + "\nEstilo de evitação: " + evitacao + "\nEstilo de compromisso: " + compromisso + "\nEstilo de cedência: " + acomodacao + "\nEstilo de resolução de problemas/colaboração: " + resolucao);
+return "Estilo de confrontação: " + confrontacao + "\nEstilo de evitação: " + evitacao + "\nEstilo de compromisso: " + compromisso + "\nEstilo de acomodação: " + acomodacao + "\nEstilo de resolução de problemas/colaboração: " + resolucao
       // Limpar as respostas selecionadas
       document.getElementById("quizForm").reset();
     });
