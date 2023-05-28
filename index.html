@@ -318,8 +318,48 @@
   </script>
 
     <button type="submit">Enviar</button>
+    
+    <input type="submit" value="Enviar">
+    
   </form>
+  
+<div id="resultado"></div>
+  
+  <script>
+  document.getElementById('quizForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o comportamento padrão do envio do formulário
 
+    // Obtém as respostas selecionadas pelo usuário
+    var answers = {};
+    var inputs = document.querySelectorAll('input[type="radio"]:checked');
+    for (var i = 0; i < inputs.length; i++) {
+      var input = inputs[i];
+      answers[input.name] = parseInt(input.value);
+    }
+
+    // Calcula o resultado
+    var result = calculateResult(answers);
+
+    // Exibe o resultado ao usuário
+    var resultadoElement = document.getElementById('resultado');
+    resultadoElement.textContent = 'Resultado: ' + result;
+
+    // Você pode adicionar mais lógica aqui, como enviar os dados para um servidor
+  });
+
+  // Função para calcular o resultado
+  function calculateResult(answers) {
+    // Implemente a lógica de cálculo do resultado aqui, com base nas respostas fornecidas
+    // Retorna o resultado calculado
+    var total = 0;
+    for (var question in answers) {
+      total += answers[question];
+    }
+    return total;
+  }
+</script>
+
+  
   <script>
     // JavaScript para processar o formulário
     document.getElementById("quizForm").addEventListener("submit", function(event) {
